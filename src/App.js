@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+import Heading from './components/Heading';
+import Counter from './Counter';
+
+
+const App = () => {
+    return (
+        <div className="App">
+            <header className="App-header">
+                <Heading text="Aplikacja licznika w ReactJS :)" classValue='gray'/>
+            </header>
+            <Counter counterInitValue={0}/>
+        </div>
+    );
+};
+
+
+// Eksport komponentu 'Counter', aby mógł być używany w innych częsciach aplikacji.
 export default App;
